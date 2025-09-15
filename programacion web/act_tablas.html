@@ -1,0 +1,77 @@
+ <!-- 
+
+ Página de un Restaurante
+Estructura básica de HTML con <head>
+<title>: “Mi Restaurante”.
+<meta charset="UTF-8"> para la codificación.
+<meta name="description"> con un resumen de la página.
+<link> para un ícono (puede ser cualquier imagen de internet como favicon).
+Encabezado principal (<h1>) con el nombre de tu restaurante.
+Secciones (<h2> y <p>):
+“Sobre nosotros” con un párrafo de presentación.
+“Nuestro menú” donde usarás una tabla.
+“Contacto” con un campo de texto y un enlace.
+Tabla del menú (<table>)
+Usa <caption> con el título: “Menú del día”.
+<thead> con encabezados: Plato, Descripción, Precio.
+<tbody> con al menos 3 filas de datos.
+<tfoot> con un mensaje tipo “¡Gracias por visitarnos!” o un resumen de precios.
+Atributos básicos:
+Un campo de texto con placeholder="Escribe tu nombre para la reservación".
+Un checkbox con checked para “¿Deseas recibir promociones?”.
+Una imagen con src y alt (puede ser un logo o comida).
+Un enlace a Google Maps con target="_blank" que diga “Ver ubicación”.
+Comentarios en el código explicando cada parte.
+ 
+ -->
+
+<!-- Encabezado -->
+<h1>Restaurante El Buen Sabor</h1>
+
+<!-- Sección sobre nosotros -->
+<h2>Sobre nosotros</h2>
+<p>Somos un restaurante familiar que ofrece comida casera.</p>
+
+<!-- Imagen del restaurante -->
+<img src="https://via.placeholder.com/200" alt="Foto del restaurante">
+
+<!-- Tabla del menú -->
+<table border="1">
+  <caption>Menú del Día</caption>
+  <thead>
+    <tr>
+      <th>Plato</th>
+      <th>Descripción</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pizza</td>
+      <td>Pizza de queso con orégano</td>
+      <td>$120</td>
+    </tr>
+    <tr>
+      <td>Ensalada</td>
+      <td>Ensalada fresca con aderezo</td>
+      <td>$80</td>
+    </tr>
+    <tr>
+      <td>Pasta</td>
+      <td>Pasta con salsa boloñesa</td>
+      <td>$100</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">¡Gracias por visitarnos!</td>
+    </tr>
+  </tfoot>
+</table>
+
+<!-- Sección contacto -->
+<h2>Contacto</h2>
+<input type="text" placeholder="Nombre de la reservación" style="width: 300px;">
+<br>
+<input type="checkbox" checked> Deseo recibir promociones <br>
+<a href="https://maps.google.com" target="_blank">Ver ubicación</a>

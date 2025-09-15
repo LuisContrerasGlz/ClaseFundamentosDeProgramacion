@@ -1,0 +1,121 @@
+<!--
+Horario de Clases
+
+1. <head> completo
+* <title>: “Mi Horario”
+* <meta charset="UTF-8">, <meta name="description" content="Horario escolar">
+* <link rel="icon" href="https://via.placeholder.com/16">
+1. Encabezado <h1>: “Horario de [Tu Nombre]”
+2. Sección “Datos” (<h2>, <p>) con grupo, semestre y turno.
+3. Tabla del horario usando todas las partes:
+    * <caption> “Horario semanal”
+    * <thead> con días (Lun–Vie)
+    * <tbody> con al menos 5 filas (horas) y celdas <td> con materia/profesor/aula
+    * <tfoot> con nota o total de horas
+    * Usa scope="col"/scope="row"
+4. Formulario mínimo
+    * <input type="text" placeholder="Escribe tu aula favorita">
+    * <input type="checkbox" checked> Quiero recordatorio de tareas
+5. Enlace a reglamento o sitio escolar con target="_blank"
+6. Comentarios  explicando cada bloque
+
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Horario escolar">
+  <link rel="icon" href="https://via.placeholder.com/16" type="image/png">
+  <title>Mi Horario</title>
+</head>
+<body>
+
+  <h1>Horario de Luis</h1>
+
+  <h2>Datos</h2>
+  <p><strong>Grupo:</strong> 5G | <strong>Semestre:</strong> 5º | <strong>Turno:</strong> Vespertino</p>
+
+  <table border="1">
+    <caption>Horario semanal</caption>
+    <thead>
+      <tr>
+        <th scope="col">Hora</th>
+        <th scope="col">Lun</th>
+        <th scope="col">Mar</th>
+        <th scope="col">Mié</th>
+        <th scope="col">Jue</th>
+        <th scope="col">Vie</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">07:00–08:00</th>
+        <td>Matemáticas<br><small>Profa. Pérez / A-1</small></td>
+        <td>Historia<br><small>Prof. Luna / B-2</small></td>
+        <td>Biología<br><small>Profa. Díaz / Lab 1</small></td>
+        <td>Inglés<br><small>Prof. Clark / A-2</small></td>
+        <td>Arte<br><small>Profa. Ríos / Taller</small></td>
+      </tr>
+      <tr>
+        <th scope="row">08:00–09:00</th>
+        <td>Física<br><small>Prof. Soto / Lab 2</small></td>
+        <td>Matemáticas<br><small>Profa. Pérez / A-1</small></td>
+        <td>Historia<br><small>Prof. Luna / B-2</small></td>
+        <td>Computación<br><small>Profa. Vega / Comp 3</small></td>
+        <td>Educ. Física<br><small>Prof. Cruz / Cancha</small></td>
+      </tr>
+      <tr>
+        <th scope="row">09:00–10:00</th>
+        <td>Química<br><small>Profa. Mora / Lab Q</small></td>
+        <td>Inglés<br><small>Prof. Clark / A-2</small></td>
+        <td>Física<br><small>Prof. Soto / Lab 2</small></td>
+        <td>Matemáticas<br><small>Profa. Pérez / A-1</small></td>
+        <td>Biología<br><small>Profa. Díaz / Lab 1</small></td>
+      </tr>
+      <tr>
+        <th scope="row">10:00–11:00</th>
+        <td>Computación<br><small>Profa. Vega / Comp 3</small></td>
+        <td>Química<br><small>Profa. Mora / Lab Q</small></td>
+        <td>Tutoría<br><small>Prof. Ruiz / A-3</small></td>
+        <td>Historia<br><small>Prof. Luna / B-2</small></td>
+        <td>Inglés<br><small>Prof. Clark / A-2</small></td>
+      </tr>
+      <tr>
+        <th scope="row">11:00–12:00</th>
+        <td>Libre</td>
+        <td>Libre</td>
+        <td>Educ. Física<br><small>Prof. Cruz / Cancha</small></td>
+        <td>Química<br><small>Profa. Mora / Lab Q</small></td>
+        <td>Computación<br><small>Profa. Vega / Comp 3</small></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="6">Total de horas: 25 · Nota: Sujeto a cambios por avisos de coordinación</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <h2>Preferencias</h2>
+  <p>
+    <label for="aula">Aula favorita:</label>
+    <input id="aula" type="text" placeholder="Escribe tu aula favorita">
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" checked>
+      Quiero recordatorio de tareas
+    </label>
+  </p>
+
+  <p>
+    Consulta el <a href="https://www.cetis155.edu.mx/" target="_blank" rel="noopener noreferrer">
+      reglamento / sitio escolar
+    </a>.
+  </p>
+
+</body>
+</html>
+

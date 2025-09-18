@@ -179,6 +179,16 @@ Templada (16–30)
 Caliente (> 30)
  
 """
+c = float(input("Escribe la temperatura en °C: "))
+
+if c <= 0:
+    print("Está congelada")
+elif c <= 15:
+    print("Está fría")
+elif c <= 30:
+    print("Está templada")
+else:
+    print("Está caliente")
 
 
 """

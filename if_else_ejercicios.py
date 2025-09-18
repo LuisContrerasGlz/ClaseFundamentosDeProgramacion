@@ -144,16 +144,12 @@ Muestra un mensaje diferente si está fuera del rango.
 
 """
 
-precio = float(input("Escribe el precio del producto: "))
+num = int(input("Escribe un número: "))
 
-if precio > 100:
-    total = precio * 0.9
-    print(f"Tienes 10% de descuento. Total a pagar: {total}")
-elif precio >= 50:
-    total = precio * 0.95
-    print(f"Tienes 5% de descuento. Total a pagar: {total}")
+if 1 <= num <= 10:
+    print(f"El número {num} está dentro del rango 1-10")
 else:
-    print(f"No tienes descuento. Total a pagar: {precio}")
+    print(f"El número {num} está fuera del rango")
 
 
 """

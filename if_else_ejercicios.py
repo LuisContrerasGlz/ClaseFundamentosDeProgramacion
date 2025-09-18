@@ -91,7 +91,20 @@ Usa if-elif-else para mostrar el resultado.
 
 """
 
+a = float(input("Escribe el primer número: "))
+b = float(input("Escribe el segundo número: "))
+operacion = input("Elige operación (+, -, *, /): ")
 
+if operacion == "+":
+    print(f"{a} + {b} = {a + b}")
+elif operacion == "-":
+    print(f"{a} - {b} = {a - b}")
+elif operacion == "*":
+    print(f"{a} * {b} = {a * b}")
+elif operacion == "/":
+    print(f"{a} / {b} = {a / b}")
+else:
+    print("Operación no válida")
 
 
 """

@@ -5,7 +5,14 @@ Pide un número entero al usuario y muestra si es positivo, negativo o cero.
 
 """
 
+numero = int(input("Escribe un número: "))
 
+if numero > 0:
+    print(f"El número {numero} es positivo")
+elif numero < 0:
+    print(f"El número {numero} es negativo")
+else:
+    print("El número es cero")
 
 
 

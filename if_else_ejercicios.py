@@ -58,7 +58,12 @@ Si está entre 60 y 100, muestra "Aprobado".
 
 """
 
+calificacion = int(input("Escribe tu calificación (0-100): "))
 
+if calificacion >= 60:
+    print("Aprobado")
+else:
+    print("Reprobado")
 
 """
 5. Comparar dos números

@@ -202,6 +202,16 @@ Si está entre 200 y 500 → propina del 15%
 Si es mayor de 500 → propina del 20%
  
 """
+cuenta = float(input("Escribe el total de la cuenta: "))
+
+if cuenta > 500:
+    propina = cuenta * 0.20
+elif cuenta >= 200:
+    propina = cuenta * 0.15
+else:
+    propina = cuenta * 0.10
+
+print(f"La propina sugerida es: {propina}")
 
 
 """

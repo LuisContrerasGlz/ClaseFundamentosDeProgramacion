@@ -72,6 +72,16 @@ Solicita dos números y muestra cuál es el mayor o si son iguales.
 
 """
 
+a = int(input("Escribe el primer número: "))
+b = int(input("Escribe el segundo número: "))
+
+if a > b:
+    print(f"{a} es mayor que {b}")
+elif b > a:
+    print(f"{b} es mayor que {a}")
+else:
+    print("Ambos números son iguales")
+
 
 """
 6. Calculadora simple

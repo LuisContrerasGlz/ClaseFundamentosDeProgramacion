@@ -120,6 +120,21 @@ Menor de 60 → F
  
 """
 
+nota = int(input("Escribe tu calificación (0-100): "))
+
+if nota >= 90:
+    print("Tu nota es A")
+elif nota >= 80:
+    print("Tu nota es B")
+elif nota >= 70:
+    print("Tu nota es C")
+elif nota >= 60:
+    print("Tu nota es D")
+else:
+    print("Tu nota es F")
+
+
+
 """
 
 8. Número dentro de un rango
@@ -128,6 +143,17 @@ Pide un número y revisa si está dentro del rango 1 a 10.
 Muestra un mensaje diferente si está fuera del rango.
 
 """
+
+precio = float(input("Escribe el precio del producto: "))
+
+if precio > 100:
+    total = precio * 0.9
+    print(f"Tienes 10% de descuento. Total a pagar: {total}")
+elif precio >= 50:
+    total = precio * 0.95
+    print(f"Tienes 5% de descuento. Total a pagar: {total}")
+else:
+    print(f"No tienes descuento. Total a pagar: {precio}")
 
 
 """

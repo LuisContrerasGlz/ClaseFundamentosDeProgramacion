@@ -222,3 +222,15 @@ Pide a dos jugadores que escriban "piedra", "papel" o "tijeras".
 Usa condiciones para determinar quién gana o si es empate.
 
 """
+
+jugador1 = input("Jugador 1, elige: piedra, papel o tijeras: ").lower()
+jugador2 = input("Jugador 2, elige: piedra, papel o tijeras: ").lower()
+
+if jugador1 == jugador2:
+    print("Es un empate")
+elif (jugador1 == "piedra" and jugador2 == "tijeras") or \
+     (jugador1 == "papel" and jugador2 == "piedra") or \
+     (jugador1 == "tijeras" and jugador2 == "papel"):
+    print("¡Gana Jugador 1! ")
+else:
+    print("¡Gana Jugador 2! ")

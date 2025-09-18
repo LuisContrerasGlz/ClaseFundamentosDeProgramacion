@@ -23,6 +23,12 @@ Solicita la edad de una persona y muestra un mensaje que indique si es mayor de 
 
 """
 
+edad = int(input("Escribe tu edad: "))
+
+if edad >= 18:
+    print("Eres mayor de edad")
+else:
+    print("Eres menor de edad")
 
 
 """

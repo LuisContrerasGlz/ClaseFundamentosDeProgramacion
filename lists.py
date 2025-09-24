@@ -119,3 +119,19 @@ print("Después de remove('gato'):", animales)  # ['perro', 'conejo', 'gato']
 
 # Si el valor no existe, da error:
 # animales.remove("tigre")  # ValueError: list.remove(x): x not in list
+
+# ==========================
+# Uso de índices negativos en listas
+# ==========================
+
+frutas = ["manzana", "plátano", "naranja", "pera", "uva"]
+print("Lista de frutas:", frutas)
+
+# Último elemento con índice -1
+print("Último elemento (índice -1):", frutas[-1])  # uva
+
+# Penúltimo elemento con índice -2
+print("Penúltimo elemento (índice -2):", frutas[-2])  # pera
+
+# Antepenúltimo elemento con índice -3
+print("Antepenúltimo elemento (índice -3):", frutas[-3])  # naranja

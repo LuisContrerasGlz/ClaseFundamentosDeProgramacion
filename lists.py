@@ -199,3 +199,8 @@ lst = [[5, 6, []], [2, 3], [1, 2, 3]]
 # Acceder al último elemento con índice -1 → [1, 2, 3]
 # Luego acceder al índice 1 de esa lista → 2
 print(lst[-1][1])   # Resultado: 2
+
+# Usando índice positivo:
+# lst[2] → tercer elemento de la lista principal → [1, 2, 3]
+# lst[2][1] → segundo elemento de esa lista → 2
+print("Índices positivos:", lst[2][1])   # Resultado: 2

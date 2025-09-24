@@ -157,3 +157,36 @@ nombres2 = ["María", "Carlos"]
 todos = nombres1 + nombres2
 
 print("Nombres combinados:", todos)  # ['Ana', 'Luis', 'María', 'Carlos']
+
+# ==========================
+# Usar .extend() para combinar listas
+# ==========================
+
+# Dos listas
+lista1 = [1, 2, 3]
+lista2 = [4, 5, 6]
+
+print("Lista 1 antes:", lista1)  # [1, 2, 3]
+print("Lista 2:", lista2)        # [4, 5, 6]
+
+# Agregar los elementos de lista2 a lista1 con extend()
+lista1.extend(lista2)
+
+print("Lista 1 después de extend:", lista1)  # [1, 2, 3, 4, 5, 6]
+print("Lista 2 no cambia:", lista2)          # [4, 5, 6]
+
+# ==========================
+# Diferencia entre + y extend()
+# ==========================
+
+# Con +
+lista_a = [10, 20]
+lista_b = [30, 40]
+resultado = lista_a + lista_b
+print("Con + :", resultado)   # [10, 20, 30, 40]
+print("Lista A sigue igual:", lista_a)  # [10, 20]
+
+# Con extend()
+lista_a.extend(lista_b)
+print("Con extend:", lista_a)  # [10, 20, 30, 40]
+

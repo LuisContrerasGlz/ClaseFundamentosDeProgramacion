@@ -67,3 +67,55 @@ numeros = [1, 2, 3]
 alumnos = ["Ana", "Luis"]
 alumnos.append("María")
 print("Lista con append:", alumnos)
+
+# ==========================
+# 12. pop(): eliminar y devolver un elemento
+# ==========================
+numeros = [10, 20, 30, 40, 50]
+print("Lista original:", numeros)
+
+# Elimina el último elemento
+ultimo = numeros.pop()
+print("Elemento eliminado:", ultimo)       # 50
+print("Lista después de pop():", numeros)  # [10, 20, 30, 40]
+
+# Elimina por índice
+segundo = numeros.pop(1)
+print("Elemento en índice 1 eliminado:", segundo)  # 20
+print("Lista después de pop(1):", numeros)        # [10, 30, 40]
+
+
+# ==========================
+# 13. count(): contar cuántas veces aparece un valor
+# ==========================
+letras = ["a", "b", "c", "a", "b", "a"]
+print("Lista:", letras)
+print("La 'a' aparece:", letras.count("a"), "veces")  # 3
+print("La 'b' aparece:", letras.count("b"), "veces")  # 2
+print("La 'z' aparece:", letras.count("z"), "veces")  # 0
+
+
+# ==========================
+# 14. index(): obtener la posición de un elemento
+# ==========================
+colores = ["rojo", "verde", "azul", "amarillo", "verde"]
+print("Lista de colores:", colores)
+
+pos_verde = colores.index("verde")
+print("Primera posición de 'verde':", pos_verde)  # 1
+
+# Si el elemento no existe, da error:
+# print(colores.index("negro"))  # ValueError: 'negro' is not in list
+
+
+# ==========================
+# 15. remove(): eliminar la primera aparición de un valor
+# ==========================
+animales = ["perro", "gato", "conejo", "gato"]
+print("Lista original:", animales)
+
+animales.remove("gato")
+print("Después de remove('gato'):", animales)  # ['perro', 'conejo', 'gato']
+
+# Si el valor no existe, da error:
+# animales.remove("tigre")  # ValueError: list.remove(x): x not in list

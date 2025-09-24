@@ -135,3 +135,25 @@ print("Penúltimo elemento (índice -2):", frutas[-2])  # pera
 
 # Antepenúltimo elemento con índice -3
 print("Antepenúltimo elemento (índice -3):", frutas[-3])  # naranja
+
+# ==========================
+# Combinar listas con el operador +
+# ==========================
+
+# Dos listas diferentes
+lista1 = [1, 2, 3]
+lista2 = [4, 5, 6]
+
+# Combinar usando +
+lista_combinada = lista1 + lista2
+
+print("Lista 1:", lista1)            # [1, 2, 3]
+print("Lista 2:", lista2)            # [4, 5, 6]
+print("Lista combinada:", lista_combinada)  # [1, 2, 3, 4, 5, 6]
+
+# También funciona con listas de strings
+nombres1 = ["Ana", "Luis"]
+nombres2 = ["María", "Carlos"]
+todos = nombres1 + nombres2
+
+print("Nombres combinados:", todos)  # ['Ana', 'Luis', 'María', 'Carlos']

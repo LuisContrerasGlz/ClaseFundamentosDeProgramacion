@@ -190,3 +190,12 @@ print("Lista A sigue igual:", lista_a)  # [10, 20]
 lista_a.extend(lista_b)
 print("Con extend:", lista_a)  # [10, 20, 30, 40]
 
+# ==========================
+# Ejemplo de listas anidadas e índices negativos
+# ==========================
+
+lst = [[5, 6, []], [2, 3], [1, 2, 3]]
+
+# Acceder al último elemento con índice -1 → [1, 2, 3]
+# Luego acceder al índice 1 de esa lista → 2
+print(lst[-1][1])   # Resultado: 2

@@ -142,6 +142,47 @@ print("Con strip():", repr(texto.strip()))  # 'hola mundo'
 ejemplo = "----Python----"
 print("Con strip('-'):", ejemplo.strip("-"))  # Python
 
+# ==========================
+# Uso de 'in' en strings
+# ==========================
+
+texto = "Python es genial"
+
+# Revisar si un carácter está en el string
+print("'P' in texto:", 'P' in texto)      # True
+print("'z' in texto:", 'z' in texto)      # False
+
+# Revisar si una palabra está en el string
+print("'genial' in texto:", 'genial' in texto)  # True
+print("'java' in texto:", 'java' in texto)      # False
+
+# También funciona con condiciones if
+if "Python" in texto:
+    print("La palabra 'Python' está en el texto")
+
+if "Java" not in texto:
+    print("La palabra 'Java' NO está en el texto")
+
+# ==========================
+# isdigit(): True si todos los caracteres son dígitos
+# ==========================
+
+s = "19"
+
+is_digit = s.isdigit()
+print(is_digit)   # True
+
+# ==========================
+# isdigit(): False si el string contiene algo distinto a dígitos
+# ==========================
+
+s = "19h"
+
+is_digit = s.isdigit()
+print(is_digit)   # False
+
+
+
 
 
 

@@ -71,3 +71,78 @@ print("mensaje.find('bra', 2):", mensaje.find('bra', 2))  # 8
 # - En strings no podemos reasignar un carácter: s[0] = 'X' daría error (inmutables).
 # ==========================
 
+# ==========================
+# upper(): convierte a mayúsculas
+# ==========================
+texto = "Hola Mundo"
+print("Texto original:", texto)
+
+mayusculas = texto.upper()
+print("Texto en mayúsculas:", mayusculas)  # HOLA MUNDO
+
+
+# ==========================
+# lower(): convierte a minúsculas
+# ==========================
+frase = "PYTHON es GENIAL"
+print("Frase original:", frase)
+
+minusculas = frase.lower()
+print("Frase en minúsculas:", minusculas)  # python es genial
+
+
+# ==========================
+# Uso combinado de upper() y lower()
+# ==========================
+palabra = "pYtHon"
+print("Palabra original:", palabra)
+print("Solo mayúsculas:", palabra.upper())  # PYTHON
+print("Solo minúsculas:", palabra.lower())  # python
+
+# Explicacion de utilidad ejemplo de upper y lower
+
+answer = input("What is my name? ")
+
+if answer == "Luis":
+    print("Correct")
+else:
+    print("Incorrect")
+
+# El codigo arriba fallaria si escribimos luis, LUIS, etc
+
+# Para solucionarlo usamos las funciones
+
+answer = input("What is my name? ")
+
+if answer.lower() == "luis":
+    print("Correct")
+else:
+    print("Incorrect")
+
+# ==========================
+# capitalize(): primera letra en mayúscula
+# ==========================
+texto1 = "python es genial"
+texto2 = "hOLa MUNDo"
+
+print("Texto original:", texto1)
+print("Con capitalize():", texto1.capitalize())  # Python es genial
+
+print("Texto original:", texto2)
+print("Con capitalize():", texto2.capitalize())  # Hola mundo
+
+# ==========================
+# strip(): eliminar espacios al inicio y al final
+# ==========================
+texto = "   hola mundo   "
+print("Texto original:", repr(texto))     # '   hola mundo   '
+print("Con strip():", repr(texto.strip()))  # 'hola mundo'
+
+# También se puede usar para quitar caracteres específicos
+ejemplo = "----Python----"
+print("Con strip('-'):", ejemplo.strip("-"))  # Python
+
+
+
+
+

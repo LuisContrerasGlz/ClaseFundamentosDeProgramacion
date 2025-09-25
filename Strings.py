@@ -230,6 +230,39 @@ s = "rojo-azul-verde-amarillo"
 colores = s.split("-")
 print(colores)   # ['rojo', 'azul', 'verde', 'amarillo']
 
+# ==========================
+# replace(): reemplazar caracteres o cadenas en un string
+# ==========================
+
+s = "hello,my,name,is,,,luis"
+
+# Reemplazar las comas por barras verticales
+s2 = s.replace(",", "|")
+
+print(s2)   # hello|my|name|is|||luis
+print(s)    # hello,my,name,is,,,luis  (el string original no cambia)
+
+# Otro ejemplo
+
+texto = "python es divertido"
+nuevo = texto.replace("divertido", "poderoso")
+print(nuevo)   # python es poderoso
+
+# ==========================
+# f-strings: interpolación de variables en un string
+# ==========================
+
+# Variables
+nombre = "Luis"
+edad = 25
+
+# Forma tradicional (concatenación)
+print("Hola, mi nombre es " + nombre + " y tengo " + str(edad) + " años.")
+
+# Usando f-strings (más limpio y legible)
+print(f"Hola, mi nombre es {nombre} y tengo {edad} años.")
+
+
 
 
 

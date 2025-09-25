@@ -181,6 +181,29 @@ s = "19h"
 is_digit = s.isdigit()
 print(is_digit)   # False
 
+# ==========================
+# isdigit() con un número decimal
+# ==========================
+
+s = "19.4"
+
+is_digit = s.isdigit()
+print(is_digit)   # False
+
+# ==========================
+# Ejemplo práctico de isdigit()
+# ==========================
+
+num = input("Number: ")
+
+if num.isdigit():
+    print("It is a number")
+    num = int(num)           # Convertimos el string a entero
+    print(num + 5)           # Operación matemática
+else:
+    print("This is not an int")
+
+
 
 
 

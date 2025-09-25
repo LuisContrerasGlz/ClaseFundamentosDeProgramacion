@@ -271,6 +271,18 @@ name = input("Name: ")
 # Repite el string 5 veces
 print(name * 5)
 
+# ==========================
+# Strings multilínea con comillas triples
+# ==========================
+
+string = """hello my name is luis
+and this is a multiline string
+!
+"""
+
+print(string)
+
+
 
 
 

@@ -262,6 +262,14 @@ print("Hola, mi nombre es " + nombre + " y tengo " + str(edad) + " años.")
 # Usando f-strings (más limpio y legible)
 print(f"Hola, mi nombre es {nombre} y tengo {edad} años.")
 
+# ==========================
+# String multiplication (*): repetir cadenas
+# ==========================
+
+name = input("Name: ")
+
+# Repite el string 5 veces
+print(name * 5)
 
 
 

@@ -203,6 +203,33 @@ if num.isdigit():
 else:
     print("This is not an int")
 
+# ==========================
+# split(): separar un string en una lista de palabras
+# ==========================
+
+s = "hello my name is luis"
+
+words = s.split()   # divide el string por espacios
+print(words)        # ['hello', 'my', 'name', 'is', 'luis']
+
+# ==========================
+# split() con separador personalizado
+# ==========================
+
+s = "manzana,pera,uva,melon"
+
+# Usamos split(",") para dividir por comas
+frutas = s.split(",")
+print(frutas)   # ['manzana', 'pera', 'uva', 'melon']
+
+# Cuando no pasamos nada a split(), se usa el espacio como separador.
+
+# Si queremos usar otro separador (coma, punto, guion, etc.), lo ponemos entre comillas dentro de los paréntesis.
+
+s = "rojo-azul-verde-amarillo"
+colores = s.split("-")
+print(colores)   # ['rojo', 'azul', 'verde', 'amarillo']
+
 
 
 

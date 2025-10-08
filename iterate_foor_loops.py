@@ -51,6 +51,17 @@ for element in tup:
 for i, element in enumerate(tup):
     print(i, element)
 
+# Usando Strings
+
+s = "my string"
+
+for i in range(len(s)):
+    print(s[i])
+
+s = "my string"
+
+for i in s:
+    print(i)
 
 
 

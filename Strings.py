@@ -282,6 +282,26 @@ and this is a multiline string
 
 print(string)
 
+# ==========================
+# join(): unir elementos de una lista en un string
+# ==========================
+
+# Lista de palabras
+palabras = ["Python", "es", "genial"]
+
+# Unir con espacio
+frase = " ".join(palabras)
+print(frase)   # Python es genial
+
+# Unir con guiones
+frase_guiones = "-".join(palabras)
+print(frase_guiones)   # Python-es-genial
+
+# Unir con comas
+frase_comas = ", ".join(palabras)
+print(frase_comas)   # Python, es, genial
+
+
 
 
 

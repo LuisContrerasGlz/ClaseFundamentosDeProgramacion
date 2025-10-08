@@ -30,8 +30,28 @@ for element in lst:
     print(element)
 
 # Enumerate para conseguir el indice y el elemento
+lst = [1, 2, 3, 4, 5, True]
 
 for i, element in enumerate(lst):
     print(i, element)
+
+# Usando Tuples
+tup = (2, 3, 4, "hello", "tim", True)
+
+# Recorrer con range y len()
+for i in range(len(tup)):
+    element = tup[i]
+    print(element)
+
+# Recorrer directamente los elementos
+for element in tup:
+    print(element)
+
+# Recorrer con índice y valor usando enumerate()
+for i, element in enumerate(tup):
+    print(i, element)
+
+
+
 
 

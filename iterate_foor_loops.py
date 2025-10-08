@@ -24,3 +24,14 @@ lst = [1, 2, 3, 4, 5, True]
 for i in range(len(lst)):
     print(lst[i])
 
+# Iterando por elemento
+
+for element in lst:
+    print(element)
+
+# Enumerate para conseguir el indice y el elemento
+
+for i, element in enumerate(lst):
+    print(i, element)
+
+

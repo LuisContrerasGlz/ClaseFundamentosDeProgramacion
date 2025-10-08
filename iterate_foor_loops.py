@@ -63,6 +63,24 @@ s = "my string"
 for i in s:
     print(i)
 
+# Break
+
+lst = [1, 2, 3, 3, 4, 4, 2, 1, 2]
+
+for num in lst:
+    if num == 4:
+        break
+    print(num)
+
+print("Done")
+
+# Continue
+
+for num in [1, 2, 3, 4, 5]:
+    if num == 4:
+        continue
+    print(num)
+
 
 
 

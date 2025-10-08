@@ -17,3 +17,10 @@ lst = [1, 2, 3, 4, 5]
 for i in range(7):
     print(lst[i])
 
+# Usando len para mayor control y flexibilidad
+
+lst = [1, 2, 3, 4, 5, True]
+
+for i in range(len(lst)):
+    print(lst[i])
+

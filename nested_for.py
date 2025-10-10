@@ -52,6 +52,48 @@ for interior_lst in lst:
     for elemento in interior_lst:  
         print(elemento)
 
+# Dada la cadena "python programming", recorre cada letra e imprime únicamente las vocales.
+
+st = "python programming"
+
+for char in st:
+    if char in "aeiou":
+        print(char)
+
+
+# Usa bucles anidados para imprimir las tablas de multiplicar del 1 al 5.
+
+for i in range(1, 6):        # Tablas del 1 al 5
+    for j in range(1, 11):   # Cada tabla hasta el 10
+        print(i, "x", j, "=", i * j)
+
+
+# Usa un for anidado para imprimir un triángulo como este:
+
+"""
+
+*
+**
+***
+****
+*****
+
+
+"""
+for i in range(1, 6):
+    for j in range(i):
+        print("*", end="")
+    print()
+
+
+# Genera todas las combinaciones posibles de una letra (A, B, C) con un número (1, 2, 3).
+letras = ["A", "B", "C"]
+numeros = [1, 2, 3]
+
+for letra in letras:
+    for numero in numeros:
+        print(letra + str(numero))
+
 
 
 

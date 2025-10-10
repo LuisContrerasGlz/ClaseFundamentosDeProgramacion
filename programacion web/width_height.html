@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Unidades CSS - Width / Height</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .box {
+      height: 50px;
+      margin-bottom: 15px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    /* % relativo al padre */
+    .percent {
+      width: 50%;              /* 50% del ancho del contenedor padre */
+      background: teal;
+    }
+
+    /* vw y vh relativos al viewport */
+    .vw {
+      width: 50vw;             /* 50% del ancho de la ventana */
+      background: purple;
+    }
+
+    .vh {
+      height: 20vh;            /* 20% de la altura de la ventana */
+      width: 100px;
+      background: darkorange;
+    }
+
+    /* ch relativo al ancho de un carácter "0" */
+    .ch {
+      width: 30ch;             /* 30 caracteres de ancho */
+      background: green;
+    }
+
+    /* rem relativo al tamaño de fuente raíz */
+    html {
+      font-size: 16px;         /* 1rem = 16px */
+    }
+    .rem {
+      width: 20rem;            /* 20 x 16px = 320px */
+      background: navy;
+    }
+
+    /* px absoluto */
+    .px {
+      width: 200px;
+      background: crimson;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejemplos de Unidades CSS</h2>
+
+  <div class="box percent">% - Relativo al padre (50%)</div>
+  <div class="box vw">vw - Relativo al ancho de la ventana (50vw)</div>
+  <div class="box vh">vh - Relativo a la altura de la ventana (20vh)</div>
+  <div class="box ch">ch - Basado en caracteres (30ch)</div>
+  <div class="box rem">rem - Relativo a la raíz (20rem)</div>
+  <div class="box px">px - Absoluto (200px)</div>
+</body>
+</html>

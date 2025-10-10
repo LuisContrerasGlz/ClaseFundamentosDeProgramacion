@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Unidades CSS - Font Size</title>
+  <style>
+    html {
+      font-size: 16px; /* 1rem = 16px */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .rem {
+      font-size: 2rem;   /* 2 x 16px = 32px */
+      color: darkblue;
+    }
+
+    .parent {
+      font-size: 20px;   /* cambia la base para em */
+      border: 1px solid gray;
+      padding: 10px;
+    }
+
+    .em {
+      font-size: 2em;    /* 2 x 20px = 40px */
+      color: darkgreen;
+    }
+
+    .px {
+      font-size: 24px;   /* fijo, siempre 24px */
+      color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejemplos de Font Size con distintas unidades</h2>
+
+  <p class="rem">Texto con font-size en REM (2rem = 32px)</p>
+
+  <div class="parent">
+    <p class="em">Texto con font-size en EM (2em, relativo al padre = 40px)</p>
+  </div>
+
+  <p class="px">Texto con font-size en PX (24px, valor fijo)</p>
+</body>
+</html>

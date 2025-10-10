@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Unidades CSS - Colores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .box {
+      width: 200px;
+      height: 60px;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Palabras clave */
+    .keyword {
+      background: red;
+    }
+
+    /* Hexadecimal */
+    .hex {
+      background: #4B7DAF;
+    }
+
+    /* RGB */
+    .rgb {
+      background: rgb(75, 125, 175);
+    }
+
+    /* RGBA con transparencia */
+    .rgba {
+      background: rgba(75, 125, 175, 0.5);
+      color: black;
+    }
+
+    /* HSL */
+    .hsl {
+      background: hsl(210, 40%, 49%);
+    }
+
+    /* HSLA con transparencia */
+    .hsla {
+      background: hsla(210, 40%, 49%, 0.5);
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejemplos de Colores en CSS</h2>
+
+  <div class="box keyword">Keyword: red</div>
+  <div class="box hex">Hex: #4B7DAF</div>
+  <div class="box rgb">RGB: rgb(75,125,175)</div>
+  <div class="box rgba">RGBA: rgba(75,125,175,0.5)</div>
+  <div class="box hsl">HSL: hsl(210,40%,49%)</div>
+  <div class="box hsla">HSLA: hsla(210,40%,49%,0.5)</div>
+</body>
+</html>

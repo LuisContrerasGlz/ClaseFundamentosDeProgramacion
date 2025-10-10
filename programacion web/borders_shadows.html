@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Unidades CSS - Bordes y Sombras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .box {
+      width: 200px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: lightblue;
+      font-weight: bold;
+    }
+
+    /* Borde y sombra con px */
+    .px {
+      border: 3px solid navy;
+      box-shadow: 5px 5px 10px gray;
+    }
+
+    /* Borde y sombra con rem */
+    .rem {
+      border: 0.5rem solid darkgreen;   /* 0.5 x 16px = 8px */
+      box-shadow: 1rem 1rem 1.5rem rgba(0,0,0,0.5);
+    }
+
+    /* Borde y sombra con em */
+    .em {
+      font-size: 20px;                  /* afecta a em */
+      border: 0.3em solid darkred;      /* 0.3 x 20px = 6px */
+      box-shadow: 0.8em 0.8em 1em rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejemplos de Bordes y Sombras con distintas unidades</h2>
+
+  <div class="box px">Borde con PX</div>
+  <div class="box rem">Borde con REM</div>
+  <div class="box em">Borde con EM</div>
+</body>
+</html>

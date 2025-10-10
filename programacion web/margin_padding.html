@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Unidades CSS - Margin y Padding</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .box {
+      background: steelblue;
+      color: white;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border: 2px solid black;
+    }
+
+    /* rem relativo al tamaño de fuente raíz (html) */
+    .rem {
+      margin: 2rem;        /* 2 x 16px = 32px */
+      padding: 1rem;       /* 1 x 16px = 16px */
+    }
+
+    /* em relativo al tamaño de fuente del propio elemento */
+    .em {
+      font-size: 20px;     /* cambia la base */
+      margin: 2em;         /* 2 x 20px = 40px */
+      padding: 1em;        /* 1 x 20px = 20px */
+    }
+
+    /* px absoluto */
+    .px {
+      margin: 30px;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejemplos de Margin y Padding con distintas unidades</h2>
+
+  <div class="box rem">Caja con margin y padding en REM</div>
+  <div class="box em">Caja con margin y padding en EM</div>
+  <div class="box px">Caja con margin y padding en PX</div>
+</body>
+</html>

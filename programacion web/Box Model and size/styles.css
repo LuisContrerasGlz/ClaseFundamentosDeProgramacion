@@ -1,0 +1,80 @@
+/* ===== Estilos generales ===== */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.contenedor {
+  position: relative; /* Necesario para que absolute se posicione dentro */
+  height: 400px;
+  border: 3px dashed gray;
+  margin: 2rem auto;
+  width: 80%;
+  padding: 1rem;
+  background-color: #f7f7f7;
+}
+
+/* ===== Estilos comunes de las cajas ===== */
+.box {
+  width: 150px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* ===== 1. static ===== */
+.static {
+  background-color: #4B7DAF;
+  position: static; /* Valor por defecto */
+}
+
+/* ===== 2. relative ===== */
+.relative {
+  background-color: #9ACD32;
+  position: relative;
+  top: 30px; /* se mueve 30px hacia abajo desde su posición original */
+  left: 40px; /* y 40px hacia la derecha */
+}
+
+/* ===== 3. absolute ===== */
+.absolute {
+  background-color: #FFA500;
+  position: absolute;
+  top: 50px;
+  right: 30px; /* se mueve respecto al contenedor padre */
+}
+
+/* ===== 4. fixed ===== */
+.fixed {
+  background-color: #D9534F;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10; /* siempre encima de todo */
+}
+
+/* ===== 5. sticky ===== */
+.sticky {
+  background-color: #6F42C1;
+  position: sticky;
+  top: 0;
+  margin-top: 50px;
+}
+
+/* ===== Relleno para hacer scroll ===== */
+.relleno {
+  height: 1200px;
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+}

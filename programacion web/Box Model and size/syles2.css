@@ -1,0 +1,63 @@
+/* ===== Estilos generales ===== */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb;
+  color: #111;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 2rem auto;
+  width: 90%;
+}
+
+/* ===== Estilos comunes de las cajas ===== */
+.box {
+  width: 300px;
+  background-color: #e0e0e0;
+  border: 5px solid #555;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Diferencias de box-sizing ===== */
+.content-box {
+  box-sizing: content-box; /* valor por defecto */
+  background-color: #B4D8F7; /* azul claro */
+}
+
+.border-box {
+  box-sizing: border-box;
+  background-color: #B2E4C8; /* verde claro */
+}
+
+/* ===== Texto dentro de las cajas ===== */
+.box h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}

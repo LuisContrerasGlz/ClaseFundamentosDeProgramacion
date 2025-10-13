@@ -1,0 +1,93 @@
+/* ========== Variables y base (1rem = 16px por defecto) ========== */
+:root {
+  --bg: hsl(210, 40%, 92%);           /* HSL */
+  --card: #4B7DAF;                    /* HEX */
+  --card-contrast: white;             /* keyword */
+  --accent: hsl(180, 70%, 40%);       /* HSL */
+  --accent-hover: rgba(75, 125, 175, .85); /* RGBA */
+}
+
+html { font-size: 16px; }
+body {
+  margin: 0;
+  padding: 2rem;                      /* REM */
+  background: var(--bg);
+  font-family: system-ui, Arial, sans-serif;
+  color: #0f172a;
+  text-align: center;
+  min-height: 100vh;                  /* VH */
+}
+
+/* ========== Tarjeta ========== */
+.card {
+  /* Ancho relativo al viewport y al padre (sin flex ni grid) */
+  width: 80%;                         /* % relativo al body */
+  max-width: 60vw;                    /* VW */
+  min-width: 280px;
+  margin: 0 auto;                     /* centra horizontal */
+  padding: 2rem;                      /* REM */
+  background: var(--card);
+  color: var(--card-contrast);
+  border-radius: 1rem;
+  border: 4px solid white;            /* PX para borde fino */
+  box-shadow: .6rem .6rem 1.2rem rgba(0,0,0,.25); /* REM + RGBA */
+  position: relative;
+}
+
+/* pseudo-elemento decorativo */
+.card::after {
+  content: "★";
+  position: absolute;
+  top: .6rem;
+  right: .8rem;
+  font-size: 1.2rem;                  /* REM */
+  color: hsla(60, 100%, 90%, .85);    /* HSLA */
+}
+
+/* ========== Imagen ========== */
+.avatar {
+  width: 10rem;                       /* REM */
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid rgba(255,255,255,.9); /* RGBA */
+  box-shadow: 0 .6rem 1rem rgba(0,0,0,.25);
+}
+
+/* ========== Texto ========== */
+.nombre {
+  /* HEX + em para ajustar desde el propio elemento */
+  color: #fffbe6;
+  font-size: 2rem;                    /* REM */
+  margin: 1rem 0 .5rem 0;
+}
+
+.bio {
+  width: 55ch;                        /* CH controla línea de lectura */
+  max-width: 100%;
+  margin: 0 auto 1.25em;              /* EM relativo al propio font-size */
+  line-height: 1.6;
+}
+
+/* ========== Botón / enlace de acción ========== */
+.btn {
+  display: inline-block;
+  padding: .8em 2em;                  /* EM escala con texto del botón */
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: .5rem;
+  border: 2px solid #ffffff;          /* PX */
+  transition: background-color .2s ease-in-out, transform .2s;
+}
+
+.btn:hover {                          /* pseudo-clase */
+  background: var(--accent-hover);    /* RGBA */
+  transform: translateY(-2px);
+}
+
+/* ========== Enlace de referencia para :link/:visited/:hover ========== */
+.nota { margin-top: 2rem; }
+.ref:link    { color: #0ea5e9; }      /* HEX */
+.ref:visited { color: #7c3aed; }      /* HEX */
+.ref:hover   { color: red; }          /* keyword */

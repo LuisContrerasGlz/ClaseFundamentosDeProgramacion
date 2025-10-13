@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Demo Flexbox – Ejemplos visuales</title>
+<style>
+  :root{
+    --bg:#0f172a10;
+    --box1:#4B7DAF; --box2:#22c55e; --box3:#f59e0b; --box4:#ef4444; --box5:#8b5cf6;
+  }
+  *{box-sizing:border-box}
+  body{font-family:system-ui,Arial,sans-serif;margin:0;padding:24px;background:var(--bg);color:#0f172a}
+  h1{margin:0 0 8px}
+  h2{margin:28px 0 8px}
+  p.code{margin:0 0 14px;color:#374151}
+  .demo{
+    border:2px dashed #94a3b8;
+    background:#ffffff;
+    padding:14px;
+    border-radius:12px;
+    margin-bottom:22px;
+  }
+  .row{display:flex; gap:12px; min-height:120px; padding:10px; border-radius:10px; background:#f8fafc}
+  .item{
+    min-width:70px; height:60px; border-radius:10px; color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:700; box-shadow:0 3px 8px #0002;
+  }
+  .a{background:var(--box1)} .b{background:var(--box2)} .c{background:var(--box3)} .d{background:var(--box4)} .e{background:var(--box5)}
+
+  /* Alturas distintas para mostrar align-items y baseline */
+  .tall{height:90px} .short{height:40px}
+
+  /* Etiqueta visual del contenedor */
+  .label{font-family:ui-monospace,SFMono,monospace; font-size:14px; color:#475569; margin:6px 0 10px}
+
+  /* Secciones específicas */
+  /* 1) flex-direction */
+  .fd-row{flex-direction:row}
+  .fd-column{flex-direction:column; height:auto; min-height:0}
+
+  /* 2) justify-content (eje principal) */
+  .jc-start{justify-content:flex-start}
+  .jc-center{justify-content:center}
+  .jc-end{justify-content:flex-end}
+  .jc-between{justify-content:space-between}
+  .jc-around{justify-content:space-around}
+  .jc-evenly{justify-content:space-evenly}
+
+  /* 3) align-items (eje cruzado) */
+  .ai-start{align-items:flex-start}
+  .ai-center{align-items:center}
+  .ai-end{align-items:flex-end}
+  .ai-stretch{align-items:stretch}
+  .ai-baseline{align-items:baseline}
+
+  /* 4) flex-wrap y gap */
+  .nowrap{flex-wrap:nowrap}
+  .wrap{flex-wrap:wrap}
+
+  /* 5) Propiedades de ítem */
+  .basis-150{flex-basis:150px}
+  .grow-1{flex-grow:1}
+  .grow-2{flex-grow:2}
+  .shrink-0{flex-shrink:0}
+  .order--1{order:-1}
+  .self-end{align-self:flex-end}
+</style>
+</head>
+<body>
+  <h1>Flexbox – Ejemplos visuales</h1>
+  <p class="code">Edita las clases en el HTML/CSS para observar cada comportamiento.</p>
+
+  <!-- 1) flex-direction -->
+  <div class="demo">
+    <h2>1) <code>flex-direction</code></h2>
+    <div class="label">Contenedor: <code>display:flex; flex-direction: row;</code></div>
+    <div class="row fd-row">
+      <div class="item a">A</div><div class="item b">B</div><div class="item c">C</div>
+    </div>
+
+    <div class="label">Contenedor: <code>display:flex; flex-direction: column;</code></div>
+    <div class="row fd-column" style="height: auto;">
+      <div class="item a">A</div><div class="item b">B</div><div class="item c">C</div>
+    </div>
+  </div>
+
+  <!-- 2) justify-content -->
+  <div class="demo">
+    <h2>2) <code>justify-content</code> (eje principal)</h2>
+    <div class="label"><code>justify-content: flex-start;</code></div>
+    <div class="row jc-start"><div class="item a">1</div><div class="item b">2</div><div class="item c">3</div></div>
+
+    <div class="label"><code>justify-content: center;</code></div>
+    <div class="row jc-center"><div class="item a">1</div><div class="item b">2</div><div class="item c">3</div></div>
+
+    <div class="label"><code>justify-content: space-between;</code></div>
+    <div class="row jc-between"><div class="item a">1</div><div class="item b">2</div><div class="item c">3</div></div>
+
+    <div class="label"><code>justify-content: space-around;</code></div>
+    <div class="row jc-around"><div class="item a">1</div><div class="item b">2</div><div class="item c">3</div></div>
+
+    <div class="label"><code>justify-content: space-evenly;</code></div>
+    <div class="row jc-evenly"><div class="item a">1</div><div class="item b">2</div><div class="item c">3</div></div>
+  </div>
+
+  <!-- 3) align-items -->
+  <div class="demo">
+    <h2>3) <code>align-items</code> (eje cruzado)</h2>
+    <div class="label"><code>align-items: flex-start;</code> (cajas con alturas variadas)</div>
+    <div class="row ai-start" style="min-height:120px">
+      <div class="item a short">A</div><div class="item b">B</div><div class="item c tall">C</div>
+    </div>
+
+    <div class="label"><code>align-items: center;</code></div>
+    <div class="row ai-center" style="min-height:120px">
+      <div class="item a short">A</div><div class="item b">B</div><div class="item c tall">C</div>
+    </div>
+
+    <div class="label"><code>align-items: baseline;</code></div>
+    <div class="row ai-baseline" style="min-height:120px">
+      <div class="item a short" style="font-size:14px">A</div>
+      <div class="item b" style="font-size:24px">B</div>
+      <div class="item c tall" style="font-size:32px">C</div>
+    </div>
+  </div>
+
+  <!-- 4) flex-wrap y gap -->
+  <div class="demo">
+    <h2>4) <code>flex-wrap</code> y <code>gap</code></h2>
+    <div class="label"><code>flex-wrap: nowrap; gap: 12px;</code></div>
+    <div class="row nowrap">
+      <div class="item a basis-150">1</div><div class="item b basis-150">2</div>
+      <div class="item c basis-150">3</div><div class="item d basis-150">4</div>
+      <div class="item e basis-150">5</div>
+    </div>
+
+    <div class="label"><code>flex-wrap: wrap; gap: 12px;</code> (los ítems saltan a otra línea)</div>
+    <div class="row wrap">
+      <div class="item a basis-150">1</div><div class="item b basis-150">2</div>
+      <div class="item c basis-150">3</div><div class="item d basis-150">4</div>
+      <div class="item e basis-150">5</div>
+    </div>
+  </div>
+
+  <!-- 5) Propiedades de Ítems: flex-basis / grow / shrink / order / align-self -->
+  <div class="demo">
+    <h2>5) Propiedades de ítems</h2>
+
+    <div class="label">
+      <code>.a {flex: 1 1 150px}</code>,
+      <code>.b {flex: 2 1 150px}</code>,
+      <code>.c {flex: 0 0 150px}</code>
+    </div>
+    <div class="row">
+      <div class="item a grow-1 basis-150">grow:1</div>
+      <div class="item b grow-2 basis-150">grow:2</div>
+      <div class="item c shrink-0 basis-150">shrink:0</div>
+    </div>
+
+    <div class="label"><code>order</code> y <code>align-self</code> (solo este ítem cambia)</div>
+    <div class="row ai-center" style="min-height:120px">
+      <div class="item a">A</div>
+      <div class="item b order--1 self-end">B (order:-1 · align-self:end)</div>
+      <div class="item c">C</div>
+    </div>
+  </div>
+</body>
+</html>

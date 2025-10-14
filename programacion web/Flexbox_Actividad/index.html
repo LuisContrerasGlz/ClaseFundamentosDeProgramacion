@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Portafolio CSS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="brand">
+      <img class="logo" src="https://picsum.photos/seed/logo/96/96" alt="Logo">
+      <div>
+        <h1 class="title">Tu Nombre</h1>
+        <p class="subtitle">Estudiante de Programación Web</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#galeria">Intereses</a>
+      <a href="#proyectos">Proyectos</a>
+    </nav>
+  </header>
+
+  <!-- Sobre mí -->
+  <section id="sobre-mi" class="sobre">
+    <h2>Sobre mí</h2>
+    <p>
+      Hola, soy <strong>Tu Nombre</strong>. Me interesan el diseño web y la programación.
+      Este párrafo limita su ancho con <code>ch</code> para mejorar la lectura y usa
+      <em>rem/em</em> para tamaños consistentes.
+    </p>
+  </section>
+
+  <!-- Galería / Intereses -->
+  <section id="galeria" class="galeria">
+    <h2>Mis intereses</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="https://picsum.photos/seed/1/480/320" alt="Interés 1">
+        <h3>Fotografía</h3>
+        <p>Capturar momentos únicos.</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/2/480/320" alt="Interés 2">
+        <h3>Deporte</h3>
+        <p>Disciplina y energía diaria.</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/3/480/320" alt="Interés 3">
+        <h3>Música</h3>
+        <p>Creatividad y ritmo.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos" class="proyectos">
+    <h2>Proyectos</h2>
+    <div class="cards proyectos-grid">
+      <article class="card proj">
+        <span class="badge">Nuevo</span>
+        <h3>Landing simple</h3>
+        <p>Maquetación con Flexbox y modelo de caja.</p>
+        <a class="btn" href="#">Ver más</a>
+      </article>
+      <article class="card proj">
+        <h3>Mini portafolio</h3>
+        <p>Uso de colores HSL y tipografías web.</p>
+        <a class="btn" href="#">Ver más</a>
+      </article>
+      <article class="card proj">
+        <h3>Card UI</h3>
+        <p>Sombras, bordes redondeados y `:hover`.</p>
+        <a class="btn" href="#">Ver más</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    Hecho con ❤️ en Programación Web · Grupo X
+  </footer>
+</body>
+</html>

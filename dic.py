@@ -88,5 +88,13 @@ values = list(x.values())
 
 print(values[0])
 
+# Obtener las claves de un diccionario
+
+x = {2: 1, 3: 3}
+
+keys = list(x.keys())
+
+print(keys[0])
+
 
 

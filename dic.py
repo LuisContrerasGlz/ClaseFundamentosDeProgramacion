@@ -55,4 +55,13 @@ del x[1]
 
 print(x)
 
+# Verificar si una clave existe en un diccionario
+
+x = {1: 1, 2: 2, 3: 3}
+
+contains = 1 in x
+
+print(contains)
+
+
 

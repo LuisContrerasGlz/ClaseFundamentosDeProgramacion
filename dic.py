@@ -63,5 +63,12 @@ contains = 1 in x
 
 print(contains)
 
+# Clave no encontrada
+
+x = {2: 1, 3: 3}
+
+contains = 1 in x
+
+print(contains)
 
 

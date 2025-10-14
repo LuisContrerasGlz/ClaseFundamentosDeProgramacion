@@ -47,5 +47,12 @@ x["key2"] = "value"
 
 print(x["key2"])
 
+# Eliminar un elemento de un diccionario
+
+x = {1: 1, 2: 2, 3: 3}
+
+del x[1]
+
+print(x)
 
 

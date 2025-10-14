@@ -39,3 +39,13 @@ x["key2"] = "value"
 
 print(x)
 
+# Crear un diccionario usando dict()
+
+x = dict()
+
+x["key2"] = "value"
+
+print(x["key2"])
+
+
+

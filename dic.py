@@ -96,5 +96,13 @@ keys = list(x.keys())
 
 print(keys[0])
 
+# Obtener las claves y valores con .items()
+
+x = {2: 1, 3: 3}
+
+items = list(x.items())
+
+print(items)
+
 
 

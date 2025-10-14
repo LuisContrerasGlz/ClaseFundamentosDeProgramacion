@@ -71,4 +71,22 @@ contains = 1 in x
 
 print(contains)
 
+# Obtener todos los valores de un diccionario
+
+x = {2: 1, 3: 3}
+
+values = x.values()
+
+print(values)
+
+
+# Convertir los valores del diccionario a una lista
+
+x = {2: 1, 3: 3}
+
+values = list(x.values())
+
+print(values[0])
+
+
 

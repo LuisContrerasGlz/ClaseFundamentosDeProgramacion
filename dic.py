@@ -110,4 +110,28 @@ x = {2: 1, 3: 3}
 for key, value in x.items():
     print("Clave:", key, "→ Valor:", value)
 
+# Contar
+
+x = {2: 1, 3: 3}
+
+print(len(x))
+
+# Usar .get() para obtener un valor o asignar uno por defecto
+
+x = {2: 1, 3: 3}
+
+x[4] = x.get(4, 0) + 1
+
+print(x)
+
+# Contar caracteres en una cadena con un diccionario
+
+characters = {}
+
+string = "hello world"
+
+for char in string:
+    characters[char] = characters.get(char, 0) + 1
+
+print(characters)
 

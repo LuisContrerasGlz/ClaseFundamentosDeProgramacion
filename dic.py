@@ -104,5 +104,10 @@ items = list(x.items())
 
 print(items)
 
+# Recorrer un diccionario con for usando .items()
+x = {2: 1, 3: 3}
+
+for key, value in x.items():
+    print("Clave:", key, "→ Valor:", value)
 
 

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>CSS Grid – Galería</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, Arial, sans-serif; background:#f6f7f9; }
+
+    .contenedor {
+      /* Convierte en grid */
+      display: grid;
+
+      /* Columnas responsivas: tantas como quepan, mínimo 220px cada tarjeta */
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+      /* Espacio entre items */
+      gap: 16px;
+
+      /* Márgenes del layout */
+      max-width: 1100px; margin: 40px auto; padding: 0 16px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    }
+
+    .card h3 { margin: 0 0 8px; font-size: 1.1rem; }
+    .card p  { margin: 0; color: #4b5563; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <main class="contenedor">
+    <article class="card"><h3>Tarjeta 1</h3><p>Contenido de ejemplo.</p></article>
+    <article class="card"><h3>Tarjeta 2</h3><p>Se ajusta al ancho.</p></article>
+    <article class="card"><h3>Tarjeta 3</h3><p>Grid con <code>auto-fit</code>.</p></article>
+    <article class="card"><h3>Tarjeta 4</h3><p>Usa <code>minmax()</code>.</p></article>
+    <article class="card"><h3>Tarjeta 5</h3><p>Columnas flexibles (fr).</p></article>
+    <article class="card"><h3>Tarjeta 6</h3><p>Prueba redimensionar la ventana.</p></article>
+  </main>
+</body>
+</html>

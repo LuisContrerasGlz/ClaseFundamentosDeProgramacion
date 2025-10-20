@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>CSS Grid – Layout con Áreas</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, Arial, sans-serif; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;     /* sidebar + contenido */
+      grid-template-rows: 64px 1fr 64px;    /* header, main, footer */
+      grid-template-areas:
+        "header  header"
+        "sidebar main"
+        "footer  footer";
+      min-height: 100dvh;
+    }
+
+    header  { grid-area: header;  background:#111827; color:white; padding:16px; }
+    aside   { grid-area: sidebar; background:#f3f4f6; padding:16px; }
+    main    { grid-area: main;    padding:16px; }
+    footer  { grid-area: footer;  background:#111827; color:white; padding:16px; }
+
+    .demo-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .demo-box div {
+      background:#e5e7eb; border-radius:10px; padding:16px; text-align:center;
+    }
+
+    /* Responsive: en pantallas angostas, el sidebar baja debajo del header */
+    @media (max-width: 800px) {
+      .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: 56px auto auto 56px;
+        grid-template-areas:
+          "header"
+          "main"
+          "sidebar"
+          "footer";
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <header><strong>Header</strong> — Menú superior</header>
+    <aside><strong>Sidebar</strong><br/>Links, filtros, navegación</aside>
+    <main>
+      <h1>Contenido</h1>
+      <p>Ejemplo de cuadrícula interna (3 columnas):</p>
+      <div class="demo-box">
+        <div>A</div><div>B</div><div>C</div>
+        <div>D</div><div>E</div><div>F</div>
+      </div>
+    </main>
+    <footer>Footer — © Tu curso</footer>
+  </div>
+</body>
+</html>

@@ -36,3 +36,19 @@ my_set = {"manzana", "pera", "uva"}
 for fruta in my_set:
     print(fruta)
 
+# Union, Combina los elementos de ambos conjuntos sin repetir.
+
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a | b)
+
+# Intersección (&), Devuelve los elementos que están en ambos conjuntos.
+
+a = {1, 2, 3}
+b = {2, 3, 4}
+
+print(a & b)
+
+
+

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>CSS Grid – Alineación</title>
+  <style>
+    body {
+      margin: 0;
+      display: grid;
+      height: 100vh;
+      /* Centramos todo el contenido dentro del body */
+      place-items: center;
+      background: #f3f4f6;
+      font-family: system-ui, sans-serif;
+    }
+
+    .contenedor {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(2, 100px);
+      gap: 10px;
+
+      /* Alineación del conjunto de celdas */
+      justify-content: center;
+      align-content: center;
+
+      background: #e0e7ff;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .contenedor div {
+      background: #6366f1;
+      color: white;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div>A</div><div>B</div><div>C</div>
+    <div>D</div><div>E</div><div>F</div>
+  </div>
+</body>
+</html>

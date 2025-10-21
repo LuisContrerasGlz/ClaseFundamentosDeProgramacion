@@ -22,3 +22,11 @@ my_set.remove(2)
 
 print(my_set)
 
+# Verificar si un elemento está en el set
+
+my_set = {1, 2, 3, 4}
+
+print(3 in my_set)   # True
+print(5 in my_set)   # False
+
+

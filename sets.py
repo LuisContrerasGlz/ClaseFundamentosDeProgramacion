@@ -57,4 +57,11 @@ b = {3, 4, 5}
 
 print(a - b)
 
+# Diferencia simétrica (^), Devuelve los elementos que están en uno u otro conjunto, pero no en ambos.
+
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a ^ b)
+
 

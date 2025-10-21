@@ -7,3 +7,12 @@ my_set = set()
 my_set = {1, 2, 3, 4, 5}
 
 print(my_set)
+
+# Agregar elementos
+
+my_set = {1, 2, 3}
+my_set.add(4)
+
+print(my_set)
+
+

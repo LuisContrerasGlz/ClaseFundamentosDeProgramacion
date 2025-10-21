@@ -29,4 +29,10 @@ my_set = {1, 2, 3, 4}
 print(3 in my_set)   # True
 print(5 in my_set)   # False
 
+# Recorrer un set con un bucle for(orden no garantizado)
+
+my_set = {"manzana", "pera", "uva"}
+
+for fruta in my_set:
+    print(fruta)
 

@@ -50,5 +50,11 @@ b = {2, 3, 4}
 
 print(a & b)
 
+# Diferencia (-), Devuelve los elementos que están en un conjunto pero no en el otro.
+
+a = {1, 2, 3, 4}
+b = {3, 4, 5}
+
+print(a - b)
 
 

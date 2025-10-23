@@ -7,6 +7,13 @@ if len(set(texto)) == len(texto):
 else:
     print("Hay caracteres repetidos.")
 
+# Contar cuántos elementos únicos hay en una lista
+
+numeros = [1, 2, 2, 3, 4, 4, 5]
+unicos = set(numeros)
+
+print("Cantidad de elementos únicos:", len(unicos))
+
 # Encontrar la intersección entre dos listas
 
 lista1 = [1, 2, 3, 4, 5]
@@ -41,10 +48,5 @@ if duplicado:
 else:
     print("No hay elementos duplicados.")
 
-# Contar cuántos elementos únicos hay en una lista
 
-numeros = [1, 2, 2, 3, 4, 4, 5]
-unicos = set(numeros)
-
-print("Cantidad de elementos únicos:", len(unicos))
 

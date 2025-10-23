@@ -64,4 +64,10 @@ b = {3, 4, 5}
 
 print(a ^ b)
 
+# Convertir lista a set (para eliminar duplicados)
+
+numeros = [1, 2, 2, 3, 4, 4, 5]
+sin_duplicados = set(numeros)
+
+print(sin_duplicados)
 

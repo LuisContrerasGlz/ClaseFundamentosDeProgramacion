@@ -48,5 +48,16 @@ if duplicado:
 else:
     print("No hay elementos duplicados.")
 
+# Pide al usuario dos frases distintas y muestra las palabras que aparecen en ambas (sin importar mayúsculas o minúsculas).
+
+frase1 = input("Ingresa la primera frase: ").lower()
+frase2 = input("Ingresa la segunda frase: ").lower()
+
+palabras1 = set(frase1.split())
+palabras2 = set(frase2.split())
+
+comunes = palabras1 & palabras2
+
+print("Palabras en común:", comunes)
 
 

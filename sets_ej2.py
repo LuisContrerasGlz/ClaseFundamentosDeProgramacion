@@ -41,4 +41,10 @@ if duplicado:
 else:
     print("No hay elementos duplicados.")
 
+# Contar cuántos elementos únicos hay en una lista
+
+numeros = [1, 2, 2, 3, 4, 4, 5]
+unicos = set(numeros)
+
+print("Cantidad de elementos únicos:", len(unicos))
 

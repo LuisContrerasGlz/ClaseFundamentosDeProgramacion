@@ -60,4 +60,30 @@ comunes = palabras1 & palabras2
 
 print("Palabras en común:", comunes)
 
+"""
 
+Pide al usuario una lista de números (separados por espacios).
+Muestra:
+
+Qué números se repiten.
+
+Qué números aparecen una sola vez.
+
+"""
+
+entrada = input("Ingresa números separados por espacio: ")
+numeros = list(map(int, entrada.split()))
+
+unicos = set()
+repetidos = set()
+
+for n in numeros:
+    if n in unicos:
+        repetidos.add(n)
+    else:
+        unicos.add(n)
+
+solo_unicos = unicos - repetidos
+
+print("Números repetidos:", repetidos)
+print("Números únicos:", solo_unicos)

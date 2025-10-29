@@ -43,3 +43,9 @@ const primerAdulto = edades.find(e => e >= 18);
 
 console.log(adultos); // [18, 25, 30]
 console.log(primerAdulto); // 18
+
+// map
+
+const nums = [1, 2, 3];
+const doble = nums.map(n => n * 2);
+console.log(doble); // [2, 4, 6]

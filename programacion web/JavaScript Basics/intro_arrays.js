@@ -29,3 +29,17 @@ const b = [3, 4];
 const c = a.concat(b); // [1, 2, 3, 4]
 
 const parte = c.slice(1, 3); // [2, 3]
+
+// Join
+
+const palabras = ["Hola", "mundo"];
+console.log(palabras.join(" ")); // "Hola mundo"
+
+// filter and find
+
+const edades = [12, 18, 25, 30];
+const adultos = edades.filter(e => e >= 18);
+const primerAdulto = edades.find(e => e >= 18);
+
+console.log(adultos); // [18, 25, 30]
+console.log(primerAdulto); // 18

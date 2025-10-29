@@ -21,3 +21,11 @@ for (let n of numeros2) {
 const nombres = ["Ana", "Luis", "Pedro"];
 nombres.sort();     // ["Ana", "Luis", "Pedro"]
 nombres.reverse();  // ["Pedro", "Luis", "Ana"]
+
+// Concat slice
+
+const a = [1, 2];
+const b = [3, 4];
+const c = a.concat(b); // [1, 2, 3, 4]
+
+const parte = c.slice(1, 3); // [2, 3]

@@ -15,3 +15,9 @@ const numeros2 = [10, 20, 30, 40];
 for (let n of numeros2) {
   console.log("Valor:", n);
 }
+
+// Sort y reverse
+
+const nombres = ["Ana", "Luis", "Pedro"];
+nombres.sort();     // ["Ana", "Luis", "Pedro"]
+nombres.reverse();  // ["Pedro", "Luis", "Ana"]

@@ -69,4 +69,9 @@ const letras = ["B", "C"];
 letras.unshift("A");  // ["A", "B", "C"]
 letras.shift();       // ["B", "C"]
 
+// push and pop
+
+const colores = ["Rojo", "Azul"];
+colores.push("Verde");   // ["Rojo", "Azul", "Verde"]
+colores.pop();           // ["Rojo", "Azul"]
 

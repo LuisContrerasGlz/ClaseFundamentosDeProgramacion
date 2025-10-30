@@ -49,3 +49,24 @@ console.log(primerAdulto); // 18
 const nums = [1, 2, 3];
 const doble = nums.map(n => n * 2);
 console.log(doble); // [2, 4, 6]
+
+// For each
+
+const animales = ["Perro", "Gato", "Loro"];
+animales.forEach(animal => console.log(animal));
+
+// Index of and includes
+
+const numeros3 = [5, 10, 15];
+console.log(numeros3.indexOf(10)); // 1
+console.log(numeros3.includes(20)); // false
+
+// unshift and shift 
+// unshift() agrega un elemento al inicio del arreglo.
+// shift() elimina el primer elemento.
+
+const letras = ["B", "C"];
+letras.unshift("A");  // ["A", "B", "C"]
+letras.shift();       // ["B", "C"]
+
+

@@ -75,3 +75,8 @@ const colores = ["Rojo", "Azul"];
 colores.push("Verde");   // ["Rojo", "Azul", "Verde"]
 colores.pop();           // ["Rojo", "Azul"]
 
+// length
+const numeros4 = [10, 20, 30];
+console.log(numeros4.length); // 3
+
+

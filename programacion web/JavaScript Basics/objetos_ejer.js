@@ -53,3 +53,32 @@ const rectangulo = {
 };
 
 console.log("Área del rectángulo:", rectangulo.area());
+
+/*
+Crea un arreglo alumnos que contenga tres objetos, cada uno con las propiedades nombre y calificacion.
+Luego recorre el arreglo e imprime solo los alumnos con calificación mayor o igual a 8.
+*/
+
+const alumnos = [
+  { nombre: "Luis", calificacion: 9 },
+  { nombre: "Marta", calificacion: 7 },
+  { nombre: "Sofía", calificacion: 10 }
+];
+
+for (let alumno of alumnos) {
+  if (alumno.calificacion >= 8) {
+    console.log(`${alumno.nombre} aprobó con ${alumno.calificacion}`);
+  }
+}
+
+// Crea un programa que cuente cuántas propiedades tiene un objeto.
+
+const producto = {
+  nombre: "Laptop",
+  marca: "HP",
+  precio: 15000
+};
+
+const cantidad = Object.keys(producto).length;
+console.log("El objeto tiene " + cantidad + " propiedades.");
+

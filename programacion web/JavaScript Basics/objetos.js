@@ -27,3 +27,23 @@ coche.modelo = "Yaris";
 delete coche.marca;
 
 console.log(coche);
+
+// Recorrer un objeto
+
+const alumno = { nombre: "Ana", grupo: "6B", promedio: 9.4 };
+
+for (let clave in alumno) {
+  console.log(clave + ": " + alumno[clave]);
+}
+ 
+// Objetos dentro de arreglos
+
+const productos = [
+  { nombre: "Laptop", precio: 15000 },
+  { nombre: "Mouse", precio: 300 },
+  { nombre: "Teclado", precio: 500 }
+];
+
+for (let p of productos) {
+  console.log(p.nombre + " cuesta $" + p.precio);
+}

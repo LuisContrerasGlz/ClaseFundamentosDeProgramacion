@@ -82,3 +82,17 @@ const producto = {
 const cantidad = Object.keys(producto).length;
 console.log("El objeto tiene " + cantidad + " propiedades.");
 
+/*
+Crea un arreglo que contenga tres objetos, cada uno representando a una persona con las propiedades nombre, edad y ciudad.
+El programa debe recorrer el arreglo y mostrar en consola una frase con la información de cada persona.
+*/
+
+const personas = [
+  { nombre: "Ana", edad: 25, ciudad: "Monterrey" },
+  { nombre: "Luis", edad: 30, ciudad: "Guadalajara" },
+  { nombre: "Sofía", edad: 22, ciudad: "Puebla" }
+];
+
+for (let persona of personas) {
+  console.log(`${persona.nombre} tiene ${persona.edad} años y vive en ${persona.ciudad}.`);
+}

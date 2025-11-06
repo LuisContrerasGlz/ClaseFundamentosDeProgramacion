@@ -65,3 +65,16 @@ console.log(obj);
 console.log('name' in website);
 console.log(website.hasOwnProperty('name'));
 
+// También podemos definir funciones dentro de los objetos, llamadas "métodos".
+// Los métodos permiten que el objeto tenga comportamientos o acciones propias.
+
+const website = {
+  name: 'AlgoExpert',
+  rating: 5,
+  founders: ['Clement', 'Antoine'],
+  sayHello() {
+    console.log('hello');
+  }
+};
+
+website.sayHello();

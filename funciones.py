@@ -24,3 +24,18 @@ nombre = input("Ingresa tu nombre: ")
 edad = input("Ingresa tu edad: ")
 presentar(nombre, edad)
 
+# Crea una función sumar(a, b) que devuelva la suma de dos números.
+
+def sumar(a, b):
+    return a + b
+
+resultado = sumar(5, 3)
+print(f"La suma es {resultado}")
+
+# Crea una función promedio(num1, num2, num3) que devuelva el promedio de tres números.
+
+def promedio(num1, num2, num3):
+    return (num1 + num2 + num3) / 3
+
+resultado = promedio(8, 6, 10)
+print(f"El promedio es {round(resultado, 2)}")

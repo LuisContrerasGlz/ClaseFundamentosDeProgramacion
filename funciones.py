@@ -72,3 +72,57 @@ datos(nombre="Luis", edad=25, ciudad="CDMX")
 
 # Mezclado
 datos("María", edad=30, ciudad="Guadalajara")
+
+"""
+Crea una función area_triangulo(base, altura) que devuelva el área.
+Usa return y muestra el resultado.
+"""
+
+def area_triangulo(base, altura):
+    return (base * altura) / 2
+
+print(f"El área es {area_triangulo(6, 4)}")
+
+"""
+Crea una función celsius_a_fahrenheit(c) que devuelva el valor convertido a Fahrenheit.
+Usa la fórmula: F = (C * 9/5) + 32
+"""
+
+def celsius_a_fahrenheit(c):
+    return (c * 9/5) + 32
+
+print(f"20°C equivalen a {celsius_a_fahrenheit(20)}°F")
+
+"""
+Crea un programa con tres funciones:
+
+menu() – muestra opciones.
+
+suma(a, b) – devuelve la suma.
+
+resta(a, b) – devuelve la resta.
+
+Permite al usuario elegir qué operación realizar.
+"""
+
+def menu():
+    print("1. Sumar")
+    print("2. Restar")
+
+def suma(a, b):
+    return a + b
+
+def resta(a, b):
+    return a - b
+
+menu()
+opcion = int(input("Elige una opción: "))
+a = int(input("Primer número: "))
+b = int(input("Segundo número: "))
+
+if opcion == 1:
+    print(f"Resultado: {suma(a, b)}")
+elif opcion == 2:
+    print(f"Resultado: {resta(a, b)}")
+else:
+    print("Opción no válida.")

@@ -39,3 +39,36 @@ def promedio(num1, num2, num3):
 
 resultado = promedio(8, 6, 10)
 print(f"El promedio es {round(resultado, 2)}")
+
+"""
+Crea una función saludar(nombre="invitado") que muestre un saludo.
+Si el usuario no escribe un nombre, usa el valor por defecto.
+"""
+
+def saludar(nombre="invitado"):
+    print(f"Hola, {nombre}!")
+
+saludar()
+saludar("Luis")
+
+"""
+Crea una función datos(nombre, edad, ciudad) y haz tres llamadas:
+
+Con argumentos por posición.
+
+Con argumentos por nombre.
+
+Mezclando ambos.
+"""
+
+def datos(nombre, edad, ciudad):
+    print(f"Nombre: {nombre}, Edad: {edad}, Ciudad: {ciudad}")
+
+# Por posición
+datos("Ana", 20, "Puebla")
+
+# Por nombre
+datos(nombre="Luis", edad=25, ciudad="CDMX")
+
+# Mezclado
+datos("María", edad=30, ciudad="Guadalajara")

@@ -41,4 +41,27 @@ const obj = new Object();
 obj.name = 'Conner';
 console.log(obj);
 
+// Los Symbols son valores únicos en JavaScript, usados para crear propiedades de objeto que no se repiten.
+// Aunque dos Symbols tengan la misma descripción, siempre son diferentes.
+// Pueden usarse como claves en objetos sin riesgo de sobrescribir otras propiedades.
+
+const id = Symbol('id');
+const id2 = Symbol('id2');
+
+console.log(id == id2); // false
+
+const obj = {
+  [id]: 1234,
+  [id2]: 0,
+  id: 'hello'
+};
+
+console.log(obj);
+
+// Podemos verificar si una propiedad existe en un objeto de dos formas:
+// 1. Con el operador "in" → revisa si la propiedad existe en el objeto o su prototipo.
+// 2. Con "hasOwnProperty()" → revisa solo si la propiedad pertenece directamente al objeto.
+
+console.log('name' in website);
+console.log(website.hasOwnProperty('name'));
 

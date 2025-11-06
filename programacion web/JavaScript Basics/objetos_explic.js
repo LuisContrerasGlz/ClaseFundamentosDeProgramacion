@@ -9,3 +9,14 @@ const website = {
 };
 
 console.log(website);
+
+const website2 = {
+  name: 'AlgoExpert',
+  rating: 5,
+  founders: ['Clement', 'Antoine']
+};
+
+console.log(website2.name);
+console.log(website2['name']);
+
+

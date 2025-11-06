@@ -34,5 +34,11 @@ console.log(website);
 delete website.foo;
 console.log(website);
 
+// También podemos crear objetos en JavaScript usando el constructor "new Object()".
+// Ambas crean un objeto, pero esta usa la clase Object explícitamente.
+
+const obj = new Object();
+obj.name = 'Conner';
+console.log(obj);
 
 

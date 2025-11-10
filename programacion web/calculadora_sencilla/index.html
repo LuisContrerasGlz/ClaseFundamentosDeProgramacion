@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Sencilla</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="calculadora">
+    <h2>Calculadora</h2>
+    <input type="text" id="pantalla" readonly>
+
+    <div class="botones">
+      <button onclick="agregar('7')">7</button>
+      <button onclick="agregar('8')">8</button>
+      <button onclick="agregar('9')">9</button>
+      <button onclick="agregar('/')">÷</button>
+
+      <button onclick="agregar('4')">4</button>
+      <button onclick="agregar('5')">5</button>
+      <button onclick="agregar('6')">6</button>
+      <button onclick="agregar('*')">×</button>
+
+      <button onclick="agregar('1')">1</button>
+      <button onclick="agregar('2')">2</button>
+      <button onclick="agregar('3')">3</button>
+      <button onclick="agregar('-')">−</button>
+
+      <button onclick="agregar('0')">0</button>
+      <button onclick="agregar('.')">.</button>
+      <button onclick="calcular()">=</button>
+      <button onclick="agregar('+')">+</button>
+
+      <button class="clear" onclick="borrar()">C</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

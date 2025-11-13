@@ -18,3 +18,9 @@ This is the Sixth sentence.
 
 with open(r'FakeFile.txt', 'a') as append_file:
     append_file.write(multi_line)
+
+# Read complete file 
+
+with open(r'FakeFile.txt', 'r') as read_file:
+    contenido = read_file.read()
+    print(contenido)

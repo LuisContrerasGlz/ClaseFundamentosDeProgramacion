@@ -24,3 +24,20 @@ with open(r'FakeFile.txt', 'a') as append_file:
 with open(r'FakeFile.txt', 'r') as read_file:
     contenido = read_file.read()
     print(contenido)
+
+# Using try except 
+
+try:
+    with open('datos.txt', 'r') as file:
+        contenido = file.read()
+        print("Contenido del archivo:")
+        print(contenido)
+
+except FileNotFoundError:
+    print("Error: El archivo no existe. Verifica la ruta.")
+
+except PermissionError:
+    print("Error: No tienes permisos para abrir este archivo.")
+
+except Exception as e:
+    print(f"Ocurrió un error inesperado: {e}")

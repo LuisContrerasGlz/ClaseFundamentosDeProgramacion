@@ -41,3 +41,19 @@ except PermissionError:
 
 except Exception as e:
     print(f"Ocurrió un error inesperado: {e}")
+
+# escribir en un archivo con manejo de errores
+
+try:
+    with open('notas.txt', 'w') as file:
+        file.write("Estas son mis notas guardadas correctamente.\n")
+        print("Archivo escrito exitosamente.")
+
+except FileNotFoundError:
+    print("Error: La ruta indicada no existe.")
+
+except PermissionError:
+    print("Error: No tienes permisos para escribir en esta ubicación.")
+
+except Exception as e:
+    print(f"Ocurrió un error inesperado: {e}")

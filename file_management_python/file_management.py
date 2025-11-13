@@ -57,3 +57,13 @@ except PermissionError:
 
 except Exception as e:
     print(f"Ocurrió un error inesperado: {e}")
+
+# agregar contenido (append) con manejo de errores
+
+try:
+    with open('notas.txt', 'a') as file:
+        file.write("Nueva línea agregada.\n")
+        print("Línea agregada con éxito.")
+
+except Exception as e:
+    print(f"No se pudo agregar información al archivo: {e}")

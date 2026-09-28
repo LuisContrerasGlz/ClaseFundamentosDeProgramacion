@@ -34,6 +34,7 @@ print("Lista dentro de listas:", listas)
 colores = ["rojo", "verde", "azul", "amarillo"]
 print("Primer color:", colores[0])   # rojo
 print("Tercer color:", colores[2])   # azul
+print("Último color:", colores[-1])  # amarillo
 
 # ==========================
 # 7. Longitud de la lista con len()
@@ -204,3 +205,14 @@ print(lst[-1][1])   # Resultado: 2
 # lst[2] → tercer elemento de la lista principal → [1, 2, 3]
 # lst[2][1] → segundo elemento de esa lista → 2
 print("Índices positivos:", lst[2][1])   # Resultado: 2
+
+lista_nombres = ["Luis", "Jose", "Pepe","Alex", "Juan", "Luis", "Luis"]
+numero_luis = lista_nombres.count("Luis")
+
+lupita = "lupita" in lista_nombres
+print("¿Está 'lupita' en la lista?", lupita)  # False
+
+if "Luis" in lista_nombres:
+    print(f"Luis esta en la lista en {lista_nombres.index("Luis")}")
+else:
+    print("No esta")

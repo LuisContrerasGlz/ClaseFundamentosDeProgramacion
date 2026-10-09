@@ -7,9 +7,9 @@ tup[1] = 0      # esto genera una excepción
 tup.append(1)   # esto genera una excepción
 
 # Ejemplo 1: contar elementos en una tupla
-x = (1, 2, 3)
+x = (1, 2, 3, 4, 1, 5, 1)
 count = x.count(1)
-print(count)   # salida: 1
+print(count)  
 
 # Ejemplo 2: verificar si un elemento está en la tupla
 x = (1, 2, 3)

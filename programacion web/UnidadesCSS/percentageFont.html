@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porcentaje en Fuentes</title>
+  <style>
+    /* 2em = 2 veces el tamaño de letra del padre */
+    .two-em {
+      font-size: 2em;
+    }
+
+    /* 2rem = 2 veces el tamaño de letra de la raíz (16px) = 32px */
+    .two-rem {
+      font-size: 2rem;
+    }
+
+    /* En font-size, el % también es relativo al PADRE:
+       200% = 2em (por eso se comportan igual) */
+    .two-hundred-percent {
+      font-size: 200%;
+    }
+
+    /* Padre con letra de 30px:
+       2em y 200% = 60px, pero 2rem sigue en 32px */
+    .parent {
+      font-size: 30px;
+      border: 3px solid black;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fuera del padre: los tres se ven del mismo tamaño (32px) -->
+  <div class="two-rem">2rem</div>
+  <div class="two-em">2em</div>
+  <div class="two-hundred-percent">200%</div>
+
+  <hr>
+
+  <!-- Dentro del padre: 2em y 200% crecen igual, 2rem no cambia -->
+  <div class="parent">
+    <div class="two-rem">2rem</div>
+    <div class="two-em">2em</div>
+    <div class="two-hundred-percent">200%</div>
+  </div>
+</body>
+</html>

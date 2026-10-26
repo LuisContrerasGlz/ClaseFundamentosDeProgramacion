@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ancho en Porcentaje</title>
+  <style>
+    /* Estilo base de las cajas rojas */
+    .box {
+      background-color: red;
+      border: 2px solid black;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    /* % es RELATIVO: 50% significa "la mitad del ancho de mi PADRE" */
+    .fifty-percent {
+      width: 50%;
+    }
+
+    /* px es ABSOLUTO: siempre mide 100px, sin importar el padre */
+    .one-hundred-pixels {
+      width: 100px;
+    }
+
+    /* El padre mide solo 135px, entonces 50% = 67.5px.
+       El borde es para poder ver el tamaño del padre */
+    .parent {
+      width: 135px;
+      border: 3px solid black;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Aquí el padre es el <body>: 50% = la mitad de la ventana -->
+  <div class="box fifty-percent">50%</div>
+  <div class="box one-hundred-pixels">100px</div>
+
+  <hr>
+
+  <!-- Aquí el padre es .parent (135px): 50% se hace más pequeño,
+       pero 100px sigue midiendo exactamente lo mismo -->
+  <div class="parent">
+    <div class="box fifty-percent">50%</div>
+    <div class="box one-hundred-pixels">100px</div>
+  </div>
+</body>
+</html>

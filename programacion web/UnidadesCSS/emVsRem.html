@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Em vs Rem</title>
+  <style>
+    /* em = relativo al tamaño de letra del PADRE.
+       Si el padre tiene 16px, 1em = 16px; si tiene 30px, 1em = 30px */
+    .one-em {
+      font-size: 1em;
+    }
+
+    /* rem = "root em": relativo al tamaño de letra de la RAÍZ (<html>).
+       Por defecto el navegador usa 16px, así que 1rem = 16px SIEMPRE */
+    .one-rem {
+      font-size: 1rem;
+    }
+
+    .two-em {
+      font-size: 2em;   /* 2 x tamaño del padre */
+    }
+
+    .two-rem {
+      font-size: 2rem;  /* 2 x 16px = 32px */
+    }
+
+    .two-hundred-percent {
+      font-size: 200%;  /* en font-size, 200% funciona igual que 2em */
+    }
+
+    /* ----- Ejemplo de íconos ----- */
+    .icon-container {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Contenedor "grande": cambia el tamaño de letra a 30px */
+    .icon-container.large {
+      font-size: 30px;
+    }
+
+    .icon {
+      background-color: red;
+      margin-right: 5px;
+    }
+
+    /* El ícono en em crece junto con el texto que lo acompaña */
+    .em-icon {
+      width: 1em;
+      height: 1em;
+    }
+
+    /* El ícono en rem siempre mide 16px aunque el texto crezca */
+    .rem-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    /* El padre cambia su tamaño de letra a 30px:
+       esto afecta a em, pero NO a rem */
+    .parent {
+      font-size: 30px;
+      border: 3px solid black;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fuera del padre: em y rem se ven iguales (ambos usan 16px) -->
+  <div class="one-rem">1rem</div>
+  <div class="one-em">1em</div>
+  <div class="two-rem">2rem</div>
+  <div class="two-em">2em</div>
+
+  <hr>
+
+  <!-- Dentro del padre (30px): rem no cambia, em sí crece
+       1em = 30px y 2em = 60px -->
+  <div class="parent">
+    <div class="one-rem">1rem</div>
+    <div class="one-em">1em</div>
+    <div class="two-rem">2rem</div>
+    <div class="two-em">2em</div>
+  </div>
+
+  <hr>
+
+  <!-- Íconos con tamaño de letra normal: se ven iguales -->
+  <div class="icon-container">
+    <div class="icon em-icon"></div>
+    <span class="icon-text">1em icon</span>
+  </div>
+  <div class="icon-container">
+    <div class="icon rem-icon"></div>
+    <span class="icon-text">1rem icon</span>
+  </div>
+
+  <!-- Íconos con contenedor grande (30px):
+       el de em crece con el texto, el de rem se queda pequeño -->
+  <div class="icon-container large">
+    <div class="icon em-icon"></div>
+    <span class="icon-text">1em icon</span>
+  </div>
+  <div class="icon-container large">
+    <div class="icon rem-icon"></div>
+    <span class="icon-text">1rem icon</span>
+  </div>
+</body>
+</html>

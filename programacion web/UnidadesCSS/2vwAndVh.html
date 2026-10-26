@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vw y Vh</title>
+  <style>
+    /* Estilo base de las cajas rojas */
+    .box {
+      background-color: red;
+      border: 2px solid black;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .parent {
+      border: 3px solid black;
+      padding: 5px;
+    }
+  </style>
+  <style>
+    /* vw = "viewport width": 1vw es el 1% del ANCHO de la ventana.
+       50vw = la mitad de la ventana, sin importar quién sea el padre */
+    .fifty-vw {
+      width: 50vw;
+    }
+
+    /* % depende del padre (para comparar con vw) */
+    .fifty-percent {
+      width: 50%;
+    }
+
+    /* vh = "viewport height": 1vh es el 1% del ALTO de la ventana.
+       25vh = una cuarta parte del alto de la ventana */
+    .twenty-five-vh {
+      height: 25vh;
+    }
+
+    /* Padre pequeño para ver la diferencia entre % y vw */
+    .parent {
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Prueba cambiar el tamaño de la ventana del navegador:
+       las cajas en vw y vh cambian de tamaño junto con ella -->
+  <div class="box fifty-percent">50%</div>
+  <div class="box fifty-vw">50vw</div>
+  <div class="box twenty-five-vh">25vh</div>
+
+  <hr>
+
+  <!-- Dentro del padre de 100px:
+       - 50%  se reduce (es la mitad de 100px)
+       - 50vw NO cambia y se sale del padre (sigue siendo la mitad de la ventana)
+       - 25vh mantiene su altura -->
+  <div class="parent">
+    <div class="box fifty-percent">50%</div>
+    <div class="box fifty-vw">50vw</div>
+    <div class="box twenty-five-vh">25vh</div>
+  </div>
+</body>
+</html>

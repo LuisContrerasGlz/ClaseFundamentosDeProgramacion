@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* El contenedor se marca con borde punteado para ver su espacio */
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 10px;
+            border: 3px dashed #555;
+            background-color: #e0e0e0;
+        }
+
+        /* Cada caja tiene color y borde para distinguirla */
+        .caja {
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+
+        .caja:nth-child(1) { background-color: #e74c3c; }
+        .caja:nth-child(2) { background-color: #3498db; }
+        .caja:nth-child(3) { background-color: #2ecc71; }
+        .caja:nth-child(4) { background-color: #f39c12; }
+        .caja:nth-child(5) { background-color: #9b59b6; }
+        .caja:nth-child(6) { background-color: #1abc9c; }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="caja">1</div>
+        <div class="caja">2</div>
+        <div class="caja">3</div>
+        <div class="caja">4</div>
+        <div class="caja">5</div>
+        <div class="caja">6</div>
+    </div>
+</body>
+</html>

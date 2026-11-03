@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox + Grid Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f7f8fc;
+            color: #1a1f36;
+        }
+
+        .pagina {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* MENÚ SUPERIOR: usa Flexbox para centrar su contenido en una fila */
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            height: 80px;
+            margin-bottom: 25px;
+            background-color: #3b63e3;
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+            text-transform: uppercase;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* CONTENIDO PRINCIPAL: usa Grid para acomodar las tarjetas en 3 columnas */
+        .contenido {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .tarjeta {
+            padding: 40px 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .tarjeta:nth-child(1) { background-color: #55b886; }
+        .tarjeta:nth-child(2) { background-color: #e8a23c; }
+        .tarjeta:nth-child(3) { background-color: #8660ef; }
+        .tarjeta:nth-child(4) { background-color: #4aa3e2; }
+        .tarjeta:nth-child(5) { background-color: #3b63e3; }
+        .tarjeta:nth-child(6) { background-color: #c73b76; }
+
+        .etiqueta {
+            margin-top: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 22px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Podemos combinar Flexbox y Grid!</h1>
+
+    <div class="pagina">
+        <!-- Flexbox -->
+        <nav class="menu">
+            <span>Menú superior</span>
+            <span>·</span>
+            <span>Flexbox</span>
+        </nav>
+
+        <!-- Grid -->
+        <main class="contenido">
+            <div class="tarjeta">Tarjeta 1</div>
+            <div class="tarjeta">Tarjeta 2</div>
+            <div class="tarjeta">Tarjeta 3</div>
+            <div class="tarjeta">Tarjeta 4</div>
+            <div class="tarjeta">Tarjeta 5</div>
+            <div class="tarjeta">Tarjeta 6</div>
+        </main>
+
+        <p class="etiqueta">Contenido principal · Grid</p>
+    </div>
+</body>
+</html>

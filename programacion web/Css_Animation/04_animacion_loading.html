@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <style>
+        /* Fondo oscuro para que resalte el brillo color aqua */
+        body {
+            background-color: #040716;
+        }
+
+        /* El cuadro de "cargando" */
+        .loading {
+            height: 50px;
+            width: 50px;
+
+            /* Borde grueso color aqua y esquinas apenas redondeadas */
+            border: 6px solid aqua;
+            border-radius: 4px;
+
+            /* Efecto de brillo (glow): una sombra por fuera
+               y otra por dentro (inset), ambas color aqua */
+            box-shadow: 0 0 8px aqua, 0 0 8px aqua inset;
+
+            /* Centrado exacto en la pantalla:
+               top/left 50% mueve la esquina superior izquierda al centro,
+               translate -50% -50% regresa la caja la mitad de su tamaño */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+
+            /* z-index: queda por encima de otros elementos */
+            z-index: 10;
+
+            /* Forma corta: duración | nombre | velocidad | repeticiones */
+            animation: 2s loading ease-in-out infinite;
+        }
+
+        /* La caja gira en 3 ejes, uno a la vez:
+           X = gira como volteando hacia adelante (de arriba hacia abajo)
+           Y = gira como una puerta (de lado a lado)
+           Z = gira como las manecillas del reloj (plano) */
+        @keyframes loading {
+            0% {
+                /* Inicio: sin ningún giro */
+                transform: rotateX(0) rotateY(0) rotateZ(0);
+            }
+            33% {
+                /* Primer tercio: gira 180° en el eje X */
+                transform: rotateX(180deg) rotateY(0) rotateZ(0);
+            }
+            67% {
+                /* Segundo tercio: ahora gira 180° en el eje Y */
+                transform: rotateX(180deg) rotateY(180deg) rotateZ(0);
+            }
+            100% {
+                /* Final: gira 180° en el eje Z */
+                transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading"></div>
+</body>
+</html>

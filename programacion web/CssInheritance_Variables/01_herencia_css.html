@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia en CSS</title>
+    <style>
+        /* HERENCIA: algunas propiedades que le damos al PADRE
+           pasan automáticamente a sus HIJOS (color, font-family, font-size...) */
+
+        /* Solo le damos estilo a la caja padre */
+        .padre {
+            color: darkblue;              /* SÍ se hereda */
+            font-family: Arial, sans-serif; /* SÍ se hereda */
+            font-size: 20px;              /* SÍ se hereda */
+
+            border: 3px solid crimson;    /* NO se hereda */
+            padding: 15px;                /* NO se hereda */
+        }
+
+        /* Este hijo cambia su color: lo propio le gana a lo heredado */
+        .hijo-rebelde {
+            color: green;
+        }
+
+        /* "inherit" obliga a heredar algo que normalmente NO se hereda */
+        .hijo-con-borde {
+            border: inherit;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="padre">
+        Soy el PADRE: azul, Arial, 20px y con borde rojo.
+
+        <p>Soy un hijo: heredé el color, la letra y el tamaño... pero NO el borde.</p>
+
+        <p class="hijo-rebelde">Soy un hijo rebelde: heredé la letra, pero mi color es verde.</p>
+
+        <p class="hijo-con-borde">Yo usé "inherit" para copiar el borde de mi padre.</p>
+    </div>
+
+</body>
+</html>

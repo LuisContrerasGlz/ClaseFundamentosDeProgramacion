@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables en CSS</title>
+    <style>
+        /* VARIABLES: guardamos un valor UNA vez y lo usamos muchas veces.
+           Se declaran con dos guiones --nombre
+           y se usan con var(--nombre) */
+
+        /* :root = toda la página, así las variables sirven en cualquier lugar */
+        :root {
+            --color-principal: purple;
+            --color-fondo: lavender;
+            --redondeo: 12px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--color-fondo);
+        }
+
+        h1 {
+            color: var(--color-principal);
+        }
+
+        .tarjeta {
+            border: 3px solid var(--color-principal);
+            border-radius: var(--redondeo);
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: white;
+        }
+
+        button {
+            background-color: var(--color-principal);
+            color: white;
+            border: none;
+            border-radius: var(--redondeo);
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        /* Una variable también se puede cambiar solo para una parte */
+        .tarjeta-especial {
+            --color-principal: darkorange;
+        }
+
+        /* PRUEBA: cambia "purple" por "teal" en :root y mira
+           cómo cambian el título, las tarjetas y el botón al mismo tiempo */
+    </style>
+</head>
+<body>
+
+    <h1>Variables en CSS</h1>
+
+    <div class="tarjeta">Esta tarjeta usa el color principal.</div>
+
+    <div class="tarjeta tarjeta-especial">
+        Esta tarjeta cambió la variable solo para ella.
+        <button>Botón naranja</button>
+    </div>
+
+    <button>Botón morado</button>
+
+</body>
+</html>

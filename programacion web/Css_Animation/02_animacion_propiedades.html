@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation - Propiedades</title>
+    <!-- Fuente Poppins desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Centramos la caja en la pantalla */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+        }
+
+        /* La caja que vamos a animar */
+        .element {
+            height: 200px;
+            width: 200px;
+            background: #0071FF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Poppins, sans-serif;
+            font-weight: 700;
+            font-size: 1.35rem;
+            color: white;
+
+            /* ===== Propiedades de la animación (una por una) ===== */
+
+            /* Cuánto tarda en completarse UNA vuelta de la animación */
+            animation-duration: 3s;
+
+            /* Nombre de los @keyframes que se van a usar */
+            animation-name: spin;
+
+            /* Cómo cambia la velocidad durante la animación:
+               ease-in-out = empieza lento, acelera en medio y termina lento.
+               Otros valores: linear, ease, ease-in, ease-out */
+            animation-timing-function: ease-in-out;
+
+            /* Tiempo de espera antes de que empiece la animación */
+            animation-delay: 1s;
+
+            /* Cuántas veces se repite: un número (1, 2, 3...) o infinite (siempre) */
+            animation-iteration-count: infinite;
+
+            /* Dirección: alternate = va hacia adelante y luego regresa (0% → 100% → 0%).
+               Otros valores: normal, reverse, alternate-reverse */
+            animation-direction: alternate;
+
+            /* Todo lo anterior también se puede escribir en una sola línea:
+               animation: spin 3s ease-in-out 1s infinite alternate; */
+        }
+
+        /* Pasos de la animación */
+        @keyframes spin {
+            0% {
+                /* Estado inicial: tamaño normal, sin girar y con esquinas rectas */
+                scale: 1;
+                transform: rotate(0);
+                border-radius: 0;
+            }
+            50% {
+                /* A la mitad: la caja crece al doble */
+                scale: 2;
+                transform: rotate(0);
+                border-radius: 0;
+            }
+            100% {
+                /* Al final: da una vuelta completa y se vuelve círculo */
+                transform: rotate(360deg);
+                border-radius: 50%;
+                scale: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="element">CSS Animation</div>
+</body>
+</html>
